@@ -1,20 +1,20 @@
 # Báo Cáo Cải Tiến Giao Diện Thẻ Sản Phẩm Website Thương Mại Điện Tử
 
-Môn học: Phát triển ứng dụng Web và Thương mại điện tử  
-Thực hiện: Lê Hồng Phương  
-Mã sinh viên: 31241024012  
-Lớp: EE0001  
-Website nghiên cứu: Tiki  
-Trang chạy thử nghiệm: https://tiki.vn  
+Môn học: Phát triển ứng dụng Web và Thương mại điện tử
+Thực hiện: Lê Hồng Phương 
+Mã sinh viên: 31241024012 
+Lớp: EE0001
+Website nghiên cứu: Tiki 
+Trang chạy thử nghiệm: https://tiki.vn 
 
 ---
 
 ## 1. Tổng Quan Về Website Nghiên Cứu
 
-Nền tảng khảo sát: Tiki (https://tiki.vn)  
-Lĩnh vực hoạt động: Thương mại điện tử đa ngành hàng (sách, thiết bị số, thời trang, đồ gia dụng).  
-Khách hàng mục tiêu: Người tiêu dùng mua sắm trực tuyến tại Việt Nam có nhu cầu về sản phẩm chính hãng và dịch vụ giao hàng nhanh.  
-Các chức năng chính: Tìm kiếm, lọc sản phẩm theo ngành hàng, xem thông tin chi tiết, thêm sản phẩm vào giỏ và thanh toán.  
+Nền tảng khảo sát: Tiki (https://tiki.vn)
+Lĩnh vực hoạt động: Thương mại điện tử đa ngành hàng (sách, thiết bị số, thời trang, đồ gia dụng).
+Khách hàng mục tiêu: Người tiêu dùng mua sắm trực tuyến tại Việt Nam có nhu cầu về sản phẩm chính hãng và dịch vụ giao hàng nhanh.
+Các chức năng chính: Tìm kiếm, lọc sản phẩm theo ngành hàng, xem thông tin chi tiết, thêm sản phẩm vào giỏ và thanh toán.
 
 ---
 
@@ -33,13 +33,11 @@ Các chức năng chính: Tìm kiếm, lọc sản phẩm theo ngành hàng, xem
 ## 3. Phân Tích 3 Lỗi Giao Diện Thẻ Sản Phẩm Và Phương Án Xử Lý
 
 ### 3.1. Các lỗi phát hiện trên giao diện thực tế
-
 1. Cấu trúc giá thiếu rõ ràng: Giá gốc và phần trăm giảm giá hiển thị mờ, mức độ tương phản thấp khiến người dùng khó nhận biết mức giảm.
 2. Nút mua hàng không nổi bật: Thiếu nút thao tác trực tiếp trên thẻ hoặc nút có kích thước nhỏ, chưa tạo được điểm nhấn để người dùng thực hiện hành động.
 3. Bố cục thẻ lệch nhau: Tên sản phẩm có độ dài ngắn khác nhau làm chiều cao các thẻ bị trập trùng, làm cho hàng nút bấm bị lệch không thẳng hàng.
 
 ### 3.2. Giải pháp kỹ thuật triển khai bằng HTML5 và CSS3
-
 1. Xử lý hiển thị giá:
    - Dùng font chữ đậm và kích thước lớn cho giá bán chính thức.
    - Đặt giá gốc phía dưới có gạch ngang kèm nhãn phần trăm giảm giá ngay bên cạnh để tăng mức độ chú ý.
@@ -55,7 +53,6 @@ Các chức năng chính: Tìm kiếm, lọc sản phẩm theo ngành hàng, xem
 
 ## 4. Cấu Trúc Thư Mục Dự Án
 
-```text
 ecommerce-ui-improvement/
 ├── index.html
 ├── css/
@@ -68,103 +65,32 @@ ecommerce-ui-improvement/
 ├── README.md
 └── AI_USAGE.md
 
-
-
+---
 
 ## 5. Hướng Dẫn Chạy Vấn Đáp Và Kiểm Thử
 
-### 5.1. Cách chạy dự án
-
+### Cách chạy dự án:
 1. Tải thư mục mã nguồn về máy tính.
 2. Mở file `index.html` bằng trình duyệt web bất kỳ hoặc phần mềm VS Code.
 
-### 5.2. Các điểm cần kiểm tra khi đánh giá
-
+### Các điểm cần kiểm tra khi đánh giá:
 - Giá bán hiện tại có hiển thị rõ ràng hơn so với giá gốc và phần trăm giảm giá không.
 - Thử thay đổi kích thước trình duyệt từ máy tính xuống di động để kiểm tra khả năng tự động chuyển từ 4 cột sang 2 cột.
 - Kiểm tra các thẻ sản phẩm có tên ngắn và tên dài để xác nhận chiều cao toàn bộ các thẻ và vị trí nút bấm luôn thẳng hàng.
 
----
+# 6. Cải Tiến Đã Thực Hiện 
+## 6.1. Mô tả vấn đề ban đầu - Vấn đề 1: Phần hiển thị giá sản phẩm thiếu sự tương phản. Giá gốc, giá bán và nhãn phần trăm giảm giá nằm sát nhau với font chữ mờ, khiến người mua khó nhận biết mức độ ưu đãi. - Vấn đề 2: Nút thao tác mua hàng chưa nổi bật hoặc bị thiếu trên thẻ sản phẩm, chưa tạo được điểm nhấn để kích thích hành động của khách hàng. - Vấn đề 3: Các thẻ sản phẩm nằm cùng một hàng có chiều cao không đồng đều do độ dài tên sản phẩm khác nhau. Tên quá dài làm đẩy các phần tử bên dưới xuống, làm cho hàng nút bấm bị lệch không thẳng hàng. 
 
-## 6. Cải Tiến Đã Thực Hiện
+## 6.2. Thay đổi đã thực hiện - Thay đổi 1 (Tối ưu hiển thị giá): Tách biệt giá bán chính thức bằng font chữ to (18px), tô đậm và sử dụng màu đỏ tương phản cao. Đặt giá gốc gạch ngang phía dưới cùng nhãn phần trăm giảm giá dạng khung rõ ràng ngay bên cạnh. - Thay đổi 2 (Nổi bật nút bấm): Thêm nút "Thêm vào giỏ" nằm ngang bằng chiều rộng thẻ sản phẩm, dùng màu xanh nổi bật kèm biểu tượng giỏ hàng và hiệu ứng chuyển màu khi rê chuột. - Thay đổi 3 (Cân bằng bố cục): Đặt chiều cao cố định 100% cho toàn bộ thẻ bằng CSS Grid và Flexbox. Sử dụng thuộc tính cắt chữ tự động (-webkit-line-clamp: 2) để giới hạn tiêu đề tối đa 2 dòng. Đặt thuộc tính margin-top: auto cho nút mua hàng để đảm bảo tất cả các nút luôn căn thẳng hàng ngang ở đáy thẻ. 
 
-### 6.1. Mô tả vấn đề ban đầu
 
-- Vấn đề 1: Phần hiển thị giá sản phẩm thiếu sự tương phản. Giá gốc, giá bán và nhãn phần trăm giảm giá nằm sát nhau với font chữ mờ, khiến người mua khó nhận biết mức độ ưu đãi.
-- Vấn đề 2: Nút thao tác mua hàng chưa nổi bật hoặc bị thiếu trên thẻ sản phẩm, chưa tạo được điểm nhấn để kích thích hành động của khách hàng.
-- Vấn đề 3: Các thẻ sản phẩm nằm cùng một hàng có chiều cao không đồng đều do độ dài tên sản phẩm khác nhau. Tên quá dài làm đẩy các phần tử bên dưới xuống, làm cho hàng nút bấm bị lệch không thẳng hàng.
+--- # 7. Hỗ Trợ Từ AI 
 
-### 6.2. Thay đổi đã thực hiện
+## 7.1. Tóm tắt những phần AI hỗ trợ - Phân tích và lập bảng đánh giá trải nghiệm người dùng (UX/UI) trên 5 khu vực của website Tiki.vn. - Gợi ý phương án xử lý bố cục thẻ sản phẩm bằng các kỹ thuật CSS hiện đại (Flexbox, Grid, -webkit-line-clamp). - Sinh mã khung ban đầu cho file index.html và file style.css. 
 
-- Thay đổi 1 (Tối ưu hiển thị giá): Tách biệt giá bán chính thức bằng font chữ to (18px), tô đậm và sử dụng màu đỏ tương phản cao. Đặt giá gốc gạch ngang phía dưới cùng nhãn phần trăm giảm giá dạng khung rõ ràng ngay bên cạnh.
-- Thay đổi 2 (Nổi bật nút bấm): Thêm nút "Thêm vào giỏ" nằm ngang bằng chiều rộng thẻ sản phẩm, dùng màu xanh nổi bật kèm biểu tượng giỏ hàng và hiệu ứng chuyển màu khi rê chuột.
-- Thay đổi 3 (Cân bằng bố cục): Đặt chiều cao cố định 100% cho toàn bộ thẻ bằng CSS Grid và Flexbox. Sử dụng thuộc tính cắt chữ tự động (`-webkit-line-clamp: 2`) để giới hạn tiêu đề tối đa 2 dòng. Đặt thuộc tính `margin-top: auto` cho nút mua hàng để đảm bảo tất cả các nút luôn căn thẳng hàng ngang ở đáy thẻ.
 
----
-
-## 7. Hỗ Trợ Từ AI
-
-### 7.1. Tóm tắt những phần AI hỗ trợ
-
-- Phân tích và lập bảng đánh giá trải nghiệm người dùng (UX/UI) trên 5 khu vực của website Tiki.vn.
-- Gợi ý phương án xử lý bố cục thẻ sản phẩm bằng các kỹ thuật CSS hiện đại (Flexbox, Grid, `-webkit-line-clamp`).
-- Sinh mã khung ban đầu cho file `index.html` và file `style.css`.
-
-### 7.2. Các phần tôi đã kiểm tra
-
-- Đối chiếu thực tế: Truy cập trực tiếp website Tiki.vn để xác minh các nhận xét của AI, loại bỏ các đánh giá thiếu căn cứ.
-- Sửa mã HTML: Thay đổi toàn bộ đường dẫn hình ảnh online sang thư mục tệp tin nội bộ (`images/ao_thun.jpg`, `images/giay.jpg`, `images/quan_tay.jpg`, `images/sandal.jpg`) và cập nhật tên sản phẩm, giá tiền đúng với hình ảnh thực tế.
-- Tinh chỉnh CSS: Bổ sung thuộc tính `object-fit: cover` giúp hình ảnh không bị co giãn méo tỉ lệ, thiết lập chiều cao dòng cố định cho phần tên sản phẩm để tránh lỗi hiển thị trên các trình duyệt khác nhau.
-- Kiểm thử giao diện: Mở trang web trên trình duyệt, nhấn F12 để kiểm tra độ cân bằng chiều cao của các thẻ sản phẩm và thu nhỏ màn hình để xác nhận tính năng tự động chuyển từ 4 cột sang 2 cột trên điện thoại chạy ổn định.
+## 7.2. Các phần tôi đã kiểm tra - Đối chiếu thực tế: Truy cập trực tiếp website Tiki.vn để xác minh các nhận xét của AI, loại bỏ các đánh giá thiếu căn cứ. - Sửa mã HTML: Thay đổi toàn bộ đường dẫn hình ảnh online sang thư mục tệp tin nội bộ (images/ao_thun.jpg, images/giay.jpg, images/quan_tay.jpg, images/sandal.jpg) và cập nhật tên sản phẩm, giá tiền đúng với hình ảnh thực tế. - Tinh chỉnh CSS: Bổ sung thuộc tính object-fit: cover giúp hình ảnh không bị co giãn méo tỉ lệ, thiết lập chiều cao dòng cố định cho phần tên sản phẩm để tránh lỗi hiển thị trên các trình duyệt khác nhau. - Kiểm thử giao diện: Mở trang web trên trình duyệt, nhấn F12 để kiểm tra độ cân bằng chiều cao của các thẻ sản phẩm và thu nhỏ màn hình để xác nhận tính năng tự động chuyển từ 4 cột sang 2 cột trên điện thoại chạy ổn định. 
 
 
 
-
-
-
-## 5. Hướng Dẫn Chạy Vấn Đáp Và Kiểm Thử
-
-### 5.1. Cách chạy dự án
-
-1. Tải thư mục mã nguồn về máy tính.
-2. Mở file `index.html` bằng trình duyệt web bất kỳ hoặc phần mềm VS Code.
-
-### 5.2. Các điểm cần kiểm tra khi đánh giá
-
-- Giá bán hiện tại có hiển thị rõ ràng hơn so với giá gốc và phần trăm giảm giá không.
-- Thử thay đổi kích thước trình duyệt từ máy tính xuống di động để kiểm tra khả năng tự động chuyển từ 4 cột sang 2 cột.
-- Kiểm tra các thẻ sản phẩm có tên ngắn và tên dài để xác nhận chiều cao toàn bộ các thẻ và vị trí nút bấm luôn thẳng hàng.
-
----
-
-## 6. Cải Tiến Đã Thực Hiện
-
-### 6.1. Mô tả vấn đề ban đầu
-
-- Vấn đề 1: Phần hiển thị giá sản phẩm thiếu sự tương phản. Giá gốc, giá bán và nhãn phần trăm giảm giá nằm sát nhau với font chữ mờ, khiến người mua khó nhận biết mức độ ưu đãi.
-- Vấn đề 2: Nút thao tác mua hàng chưa nổi bật hoặc bị thiếu trên thẻ sản phẩm, chưa tạo được điểm nhấn để kích thích hành động của khách hàng.
-- Vấn đề 3: Các thẻ sản phẩm nằm cùng một hàng có chiều cao không đồng đều do độ dài tên sản phẩm khác nhau. Tên quá dài làm đẩy các phần tử bên dưới xuống, làm cho hàng nút bấm bị lệch không thẳng hàng.
-
-### 6.2. Thay đổi đã thực hiện
-
-- Thay đổi 1 (Tối ưu hiển thị giá): Tách biệt giá bán chính thức bằng font chữ to (18px), tô đậm và sử dụng màu đỏ tương phản cao. Đặt giá gốc gạch ngang phía dưới cùng nhãn phần trăm giảm giá dạng khung rõ ràng ngay bên cạnh.
-- Thay đổi 2 (Nổi bật nút bấm): Thêm nút "Thêm vào giỏ" nằm ngang bằng chiều rộng thẻ sản phẩm, dùng màu xanh nổi bật kèm biểu tượng giỏ hàng và hiệu ứng chuyển màu khi rê chuột.
-- Thay đổi 3 (Cân bằng bố cục): Đặt chiều cao cố định 100% cho toàn bộ thẻ bằng CSS Grid và Flexbox. Sử dụng thuộc tính cắt chữ tự động (`-webkit-line-clamp: 2`) để giới hạn tiêu đề tối đa 2 dòng. Đặt thuộc tính `margin-top: auto` cho nút mua hàng để đảm bảo tất cả các nút luôn căn thẳng hàng ngang ở đáy thẻ.
-
----
-
-## 7. Hỗ Trợ Từ AI
-
-### 7.1. Tóm tắt những phần AI hỗ trợ
-
-- Phân tích và lập bảng đánh giá trải nghiệm người dùng (UX/UI) trên 5 khu vực của website Tiki.vn.
-- Gợi ý phương án xử lý bố cục thẻ sản phẩm bằng các kỹ thuật CSS hiện đại (Flexbox, Grid, `-webkit-line-clamp`).
-- Sinh mã khung ban đầu cho file `index.html` và file `style.css`.
-
-### 7.2. Các phần tôi đã kiểm tra
-
-- Đối chiếu thực tế: Truy cập trực tiếp website Tiki.vn để xác minh các nhận xét của AI, loại bỏ các đánh giá thiếu căn cứ.
-- Sửa mã HTML: Thay đổi toàn bộ đường dẫn hình ảnh online sang thư mục tệp tin nội bộ (`images/ao_thun.jpg`, `images/giay.jpg`, `images/quan_tay.jpg`, `images/sandal.jpg`) và cập nhật tên sản phẩm, giá tiền đúng với hình ảnh thực tế.
-- Tinh chỉnh CSS: Bổ sung thuộc tính `object-fit: cover` giúp hình ảnh không bị co giãn méo tỉ lệ, thiết lập chiều cao dòng cố định cho phần tên sản phẩm để tránh lỗi hiển thị trên các trình duyệt khác nhau.
-- Kiểm thử giao diện: Mở trang web trên trình duyệt, nhấn F12 để kiểm tra độ cân bằng chiều cao của các thẻ sản phẩm và thu nhỏ màn hình để xác nhận tính năng tự động chuyển từ 4 cột sang 2 cột trên điện thoại chạy ổn định.
 
