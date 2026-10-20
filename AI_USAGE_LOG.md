@@ -1,4 +1,15 @@
 # Nhật Ký Sử Dụng AI Trong Phát Triển Giao Diện
+Môn học: Phát triển ứng dụng Web và Thương mại điện tử
+
+Thực hiện: Lê Hồng Phương 
+
+Mã sinh viên: 31241024012 
+
+Lớp: EE0001
+
+Website nghiên cứu: Tiki 
+
+Trang chạy thử nghiệm: https://tiki.vn 
 
 Dự án: Cải tiến giao diện thẻ sản phẩm thương mại điện tử
 Đối tượng nghiên cứu: Tiki.vn
@@ -46,4 +57,34 @@ Step 3: Tiến hành chỉnh sửa và viết lại mã nguồn bằng tay để
 ## 4. Kết Luận Khi Sử Dụng AI
 
 Sử dụng AI giúp rút ngắn thời gian lập cấu trúc khung và đưa ra các gợi ý xử lý CSS hợp lý. Tuy nhiên, việc tự kiểm tra giao diện trên trình duyệt và tự tay sửa đổi mã nguồn là bắt buộc để đảm bảo tệp tin liên kết đúng cấu trúc thư mục local và hiển thị chính xác theo yêu cầu đề bài.
+## 4. Kết Quả AI Đề Xuất
+
+- Đề xuất phương án phân tích: AI đã lập bảng tổng hợp đánh giá 5 khu vực trên website Tiki.vn gồm Trang chủ, Danh mục, Chi tiết sản phẩm, Tìm kiếm và Giỏ hàng. Bảng phân tích làm rõ mục đích, thành phần giao diện, điểm thuận tiện, hạn chế thực tế và giải pháp nâng cấp trải nghiệm người dùng.
+- Đề xuất cấu trúc kỹ thuật: AI gợi ý sử dụng mô hình CSS Grid kết hợp Flexbox cho thẻ sản phẩm. Đề xuất giải pháp cắt chữ tự động bằng CSS (`-webkit-line-clamp: 2`) cho tên sản phẩm và thuộc tính `margin-top: auto` để đẩy nút bấm xuống đáy thẻ nhằm giải quyết triệt để lỗi thẻ cao thấp không đều.
+- Đề xuất mã nguồn ban đầu: AI đã sinh toàn bộ đoạn mã cấu trúc HTML5 và file định kiểu CSS3 tách biệt, bao gồm cả phần tự động co giãn giao diện (Responsive) cho máy tính và điện thoại.
+
+---
+
+## 5. Kiểm Tra Và Điều Chỉnh
+
+### 5.1. Các điểm đã tiến hành kiểm tra
+- Đối chiếu giao diện: Truy cập thực tế website Tiki.vn để xác minh các nhận xét về UX/UI do AI đưa ra, đảm bảo không sử dụng các đánh giá sai lệch hoặc thiếu căn cứ.
+- Kiểm tra mã nguồn: Mở tệp `index.html` và `style.css` bằng trình duyệt để kiểm tra khả năng liên kết giữa hai file, hiển thị hình ảnh, font chữ và độ phân giải trên màn hình máy tính lẫn điện thoại.
+
+### 5.2. Các điểm đã sửa đổi và không sử dụng
+- Thay đổi đường dẫn ảnh: Loại bỏ hoàn toàn các liên kết hình ảnh trực tuyến (URL online) do AI tạo ra ban đầu, thay bằng đường dẫn tệp tin nội bộ trong dự án (`images/ao_thun.jpg`, `images/giay.jpg`, `images/quan_tay.jpg`, `images/sandal.jpg`).
+- Cập nhật dữ liệu sản phẩm: Sửa lại tên và giá tiền của toàn bộ 4 sản phẩm mẫu cho khớp với hình ảnh thực tế thuộc nhóm hàng thời trang.
+- Tối ưu CSS: Bổ sung thuộc tính `object-fit: cover` cho thẻ ảnh để tránh bị méo tỉ lệ khi ép về khung vuông 1:1, thêm thuộc tính chiều cao dòng cố định `height: 2.8em` cho phần tiêu đề sản phẩm để giữ khung 2 dòng đồng đều trên mọi trình duyệt.
+- Loại bỏ mã thừa: Không sử dụng các đoạn mã JavaScript hoặc thư viện bên ngoài do AI gợi ý thêm, giữ đúng yêu cầu bài tập chỉ sử dụng thuần HTML5 và CSS3.
+
+---
+
+## 6. Phần Tôi Hiểu Và Có Thể Giải Thích
+
+- Cấu trúc thẻ ngữ nghĩa trong HTML: Hiểu và giải thích được vai trò của thẻ `<article>` đại diện cho một thẻ sản phẩm độc lập, thẻ `<header>` và `<main>` để phân chia khu vực trang, thẻ `<del>` để tạo đường gạch ngang giá gốc và thẻ `<button>` cho nút thao tác.
+- Mô hình CSS Grid: Giải thích được cách dùng `display: grid` và `grid-template-columns: repeat(auto-fill, minmax(240px, 1fr))` để chia cột tự động trên màn hình máy tính, giúp danh sách sản phẩm tự căn chỉnh khoảng cách mượt mà.
+- Kỹ thuật Flexbox trong thẻ sản phẩm: Giải thích được tác dụng của `display: flex; flex-direction: column; height: 100%;` áp dụng cho thẻ `.product-card`, giúp tất cả các thẻ nằm chung một hàng luôn tự co giãn bằng chiều cao của thẻ cao nhất.
+- Kỹ thuật định vị nút bấm: Giải thích được cơ chế của `margin-top: auto` áp dụng cho class `.btn-add-cart`, giúp nút bấm luôn bị đẩy xuống nằm sát đáy thẻ sản phẩm bất kể phần nội dung tên phía trên dài hay ngắn.
+- Xử lý cắt chữ CSS (Truncate Text): Giải thích được cơ chế kết hợp giữa `display: -webkit-box`, `-webkit-line-clamp: 2`, `-webkit-box-orient: vertical` và `overflow: hidden` để ép tên sản phẩm chỉ hiển thị tối đa 2 dòng và tự thêm dấu ba chấm khi bị tràn chữ.
+- Cơ chế Responsive Design: Giải thích được cách sử dụng `@media (max-width: 576px)` để can thiệp vào CSS khi xem trên thiết bị di động, chuyển từ giao diện nhiều cột sang đúng 2 cột sản phẩm chuẩn thương mại điện tử.
 
