@@ -1,11 +1,11 @@
 # Báo Cáo Cải Tiến Giao Diện Thẻ Sản Phẩm Website Thương Mại Điện Tử
 
 Môn học: Phát triển ứng dụng Web và Thương mại điện tử
-Thực hiện: [Họ và tên sinh viên]
-Mã sinh viên: [Mã sinh viên]
-Lớp: [Mã lớp]
-Website nghiên cứu: Tiki (https://tiki.vn)
-Trang chạy thử nghiệm: [Dán link GitHub Pages vào đây]
+Thực hiện: Lê Hồng Phương 
+Mã sinh viên: 31241024012 
+Lớp: EE0001
+Website nghiên cứu: Tiki 
+Trang chạy thử nghiệm: https://tiki.vn 
 
 ---
 
