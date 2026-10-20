@@ -38,7 +38,7 @@ Các chức năng chính: Tìm kiếm, lọc sản phẩm theo ngành hàng, xem
 2. Nút mua hàng không nổi bật: Thiếu nút thao tác trực tiếp trên thẻ hoặc nút có kích thước nhỏ, chưa tạo được điểm nhấn để người dùng thực hiện hành động.
 3. Bố cục thẻ lệch nhau: Tên sản phẩm có độ dài ngắn khác nhau làm chiều cao các thẻ bị trập trùng, làm cho hàng nút bấm bị lệch không thẳng hàng.
 
-### 3.2. Giải pháp kỹ thuật triển khai bằng HTML5 và CSS3
+## 4.. Giải pháp kỹ thuật triển khai bằng HTML5 và CSS3
 
 1. Xử lý hiển thị giá:
    - Dùng font chữ đậm và kích thước lớn cho giá bán chính thức.
@@ -50,27 +50,6 @@ Các chức năng chính: Tìm kiếm, lọc sản phẩm theo ngành hàng, xem
    - Áp dụng CSS Grid cho khung chứa và Flexbox cho cấu trúc bên trong thẻ sản phẩm, đặt chiều cao cố định 100%.
    - Sử dụng thuộc tính `-webkit-line-clamp: 2` kết hợp chiều cao cố định cho phần tên sản phẩm để giới hạn tối đa 2 dòng. Nếu tên dài hơn sẽ tự động xuất hiện dấu ba chấm.
    - Đặt `margin-top: auto` cho nút mua hàng để đẩy nút xuống vị trí đáy thẻ, giúp toàn bộ hàng nút luôn nằm trên một đường thẳng.
-
----
-
-## 4. Cấu Trúc Thư Mục Dự Án
-
-```text
-ecommerce-ui-improvement/
-├── index.html
-├── css/
-│   └── style.css
-├── images/
-│   ├── ao_thun.jpg
-│   ├── giay.jpg
-│   ├── quan_tay.jpg
-│   └── sandal.jpg
-├── README.md
-└── AI_USAGE.md
-
-
-
----
 
 
 ## 5. Hướng Dẫn Chạy Vấn Đáp Và Kiểm Thử
