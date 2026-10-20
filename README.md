@@ -5,7 +5,6 @@ Thực hiện: Lê Hồng Phương
 Mã sinh viên: 31241024012  
 Lớp: EE0001  
 Website nghiên cứu: Tiki  
-Trang chạy thử nghiệm: https://tiki.vn  
 
 ---
 
