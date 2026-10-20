@@ -38,7 +38,7 @@ Các chức năng chính: Tìm kiếm, lọc sản phẩm theo ngành hàng, xem
 2. Nút mua hàng không nổi bật: Thiếu nút thao tác trực tiếp trên thẻ hoặc nút có kích thước nhỏ, chưa tạo được điểm nhấn để người dùng thực hiện hành động.
 3. Bố cục thẻ lệch nhau: Tên sản phẩm có độ dài ngắn khác nhau làm chiều cao các thẻ bị trập trùng, làm cho hàng nút bấm bị lệch không thẳng hàng.
 
-## 4.. Giải pháp kỹ thuật triển khai bằng HTML5 và CSS3
+## 4. Giải pháp kỹ thuật triển khai bằng HTML5 và CSS3
 
 1. Xử lý hiển thị giá:
    - Dùng font chữ đậm và kích thước lớn cho giá bán chính thức.
