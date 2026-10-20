@@ -10,7 +10,6 @@ Lớp: EE0001
 
 Website nghiên cứu: Tiki 
 
-Trang chạy thử nghiệm: https://tiki.vn 
 
 ---
 
