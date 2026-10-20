@@ -79,7 +79,7 @@ Sử dụng AI giúp rút ngắn thời gian lập cấu trúc khung và đưa r
 
 ---
 
-## 6. Phần Tôi Hiểu Và Có Thể Giải Thích
+## 6. Phần Em Hiểu Và Có Thể Giải Thích
 
 - Cấu trúc thẻ ngữ nghĩa trong HTML: Hiểu và giải thích được vai trò của thẻ `<article>` đại diện cho một thẻ sản phẩm độc lập, thẻ `<header>` và `<main>` để phân chia khu vực trang, thẻ `<del>` để tạo đường gạch ngang giá gốc và thẻ `<button>` cho nút thao tác.
 - Mô hình CSS Grid: Giải thích được cách dùng `display: grid` và `grid-template-columns: repeat(auto-fill, minmax(240px, 1fr))` để chia cột tự động trên màn hình máy tính, giúp danh sách sản phẩm tự căn chỉnh khoảng cách mượt mà.
