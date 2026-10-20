@@ -70,8 +70,6 @@ ecommerce-ui-improvement/
 
 
 
----
-
 
 ## 5. Hướng Dẫn Chạy Vấn Đáp Và Kiểm Thử
 
