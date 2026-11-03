@@ -59,6 +59,6 @@ Bài tập cá nhân Buổi 2 tiếp tục phát triển giao diện website th�
 
 ## 7. Đường dẫn repository và website
 * **GitHub Repository:** https://github.com/PhuongLeHong-UEH/ecommerce-ui-improvement
-* **Website Demo (nếu có):** Chưa có ạ
+* **Website Demo (nếu có):** https://phuonglehong-ueh.github.io/ecommerce-ui-improvement/ 
 
 
