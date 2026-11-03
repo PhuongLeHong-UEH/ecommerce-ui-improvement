@@ -10,7 +10,7 @@ Bài tập cá nhân Buổi 2 tiếp tục phát triển giao diện website th�
 ---
 
 ## 2. Website tham khảo và khu vực đã cải tiến
-* **Website tham khảo:** [Tên website tham khảo, ví dụ: Tiki.vn / Shopee.vn / ...]
+* **Website tham khảo:** Website Tiki ở buổi 1.
 * **Khu vực đã cải tiến:** 
   * Tối ưu hóa **Header** tích hợp menu điều hướng (`<nav>`).
   * Cải tiến khu vực **Danh sách thẻ sản phẩm** (Product Grid) hiển thị thông tin giá bán, giá cũ, phần trăm giảm giá và nút bấm mua hàng.
