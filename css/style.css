@@ -33,24 +33,48 @@ body {
 }
 
 /* ==========================================
-   2. HEADER
+   2. HEADER (FLEXBOX CĂN CHỈNH LOGO VÀ MENU)
    ========================================== */
 .page-header {
     background-color: var(--card-bg);
-    padding: 24px 0;
+    padding: 20px 0;
     margin-bottom: 24px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Đẩy tiêu đề sang trái, menu sang phải */
+    align-items: center;            /* Căn giữa theo trục dọc */
+    gap: 20px;
 }
 
 .page-header h1 {
     font-size: 22px;
     color: var(--text-color);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .page-header .subtitle {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-sub);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;                      /* Khoảng cách giữa các mục menu */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
 }
 
 /* ==========================================
@@ -71,7 +95,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 100%;            /* Giúp tất cả các thẻ trong cùng 1 hàng bằng chiều cao nhau */
+    height: 100%;            
     border: 1px solid #eee;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -85,7 +109,7 @@ body {
 .product-image {
     position: relative;
     width: 100%;
-    padding-top: 100%; /* Giữ tỉ lệ khung hình vuông 1:1 */
+    padding-top: 100%; 
     background-color: #fafafa;
 }
 
@@ -95,7 +119,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Giúp ảnh không bị biến dạng */
+    object-fit: cover; 
 }
 
 .badge-fast {
@@ -110,7 +134,7 @@ body {
     border-radius: 4px;
 }
 
-/* Khối thông tin */
+/* Khối thông tin sản phẩm */
 .product-info {
     padding: 12px;
     display: flex;
@@ -118,7 +142,10 @@ body {
     flex-grow: 1;
 }
 
-/* Tên sản phẩm tự động ngắt tối đa 2 dòng */
+.product-title-link {
+    text-decoration: none;
+}
+
 .product-title {
     font-size: 14px;
     font-weight: 400;
@@ -169,7 +196,7 @@ body {
 
 /* Nút thêm vào giỏ */
 .btn-add-cart {
-    margin-top: auto; /* Luôn đẩy nút xuống đáy thẻ */
+    margin-top: auto; 
     width: 100%;
     background-color: var(--primary-color);
     color: #ffffff;
@@ -195,12 +222,30 @@ body {
     height: 16px;
 }
 
+/* Chân trang */
+.page-footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+    color: var(--text-sub);
+    font-size: 13px;
+    border-top: 1px solid #e5e5e5;
+}
+
+
+
 /* ==========================================
    5. RESPONSIVE CHO ĐIỆN THOẠI
    ========================================== */
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
     .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 cột trên điện thoại */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 8px;
     }
 
@@ -224,4 +269,76 @@ body {
         padding: 8px 0;
         font-size: 12px;
     }
+} */
+
+
+/* ==========================================
+   5. RESPONSIVE HOÀN CHỈNH CHO MỌI MÀN HÌNH
+   ========================================== */
+
+/* 1. Màn hình Tablet & Thiết bị tầm trung (dưới 992px) */
+@media (max-width: 992px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .product-grid {
+        /* Chia 2 cột đều đẹp cho màn hình tablet/laptop nhỏ */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 16px;
+    }
+}
+
+/* 2. Màn hình Điện thoại (dưới 576px) */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 8px;
+    }
+
+    .product-grid {
+        gap: 10px;
+    }
+
+    .product-info {
+        padding: 8px;
+    }
+
+    .product-title {
+        font-size: 13px;
+    }
+
+    .current-price {
+        font-size: 15px;
+    }
+
+    .btn-add-cart {
+        padding: 8px 0;
+        font-size: 12px;
+    }
+}
+
+/* ==========================================
+   BỔ SUNG TRẠNG THÁI FOCUS-VISIBLE (BƯỚC 7)
+   ========================================== */
+
+/* Hiệu ứng focus khi dùng phím Tab điều hướng menu */
+.nav-menu a:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+/* Hiệu ứng focus cho nút Thêm vào giỏ */
+.btn-add-cart:focus-visible {
+    outline: 3px solid #f59e0b; /* Đường viền viền cam nổi bật */
+    outline-offset: 3px;
+}
+
+/* Hiệu ứng focus cho liên kết thẻ sản phẩm */
+.product-title-link:focus-visible,
+.product-image a:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
