@@ -39,7 +39,7 @@ Bài tập cá nhân Buổi 2 tiếp tục phát triển giao diện website th�
 
 ---
 
-## 5. Những thay đổi tôi đã thực hiện
+## 5. Những thay đổi đã thực hiện
 * Bổ sung cấu trúc thẻ `<nav class="nav-menu">` chứa các liên kết điều hướng (*Trang chủ*, *Sản phẩm*, *Giới thiệu*) vào trong `<header>`.
 * Cập nhật quy tắc Flexbox cho Header, hỗ trợ phản hồi responsive tự động xếp dọc (`flex-direction: column`) khi co màn hình xuống kích thước thiết bị di động (390px).
 * Thiết lập hệ thống biến CSS (CSS Variables) ở `:root` để quản lý màu sắc đồng bộ (`--primary-color`, `--price-color`).
