@@ -1,46 +1,44 @@
-# Nhật Ký Sử Dụng AI Trong Phát Triển Giao Diện
+# Nhật Ký Sử Dụng AI Trong Phát Triển Giao Diện (Buổi 2)
 Môn học: Phát triển ứng dụng Web và Thương mại điện tử
 
-Thực hiện: Lê Hồng Phương 
+Thực hiện: Lê Hồng Phương  
+Mã sinh viên: 31241024012  
+Lớp: EE0001  
 
-Mã sinh viên: 31241024012 
+Website nghiên cứu: Tiki  
+Trang chạy thử nghiệm: https://tiki.vn  
 
-Lớp: EE0001
-
-Website nghiên cứu: Tiki 
-
-Trang chạy thử nghiệm: https://tiki.vn 
-
-Dự án: Cải tiến giao diện thẻ sản phẩm thương mại điện tử
-Đối tượng nghiên cứu: Tiki.vn
-Mục đích: Lập nhật ký theo dõi việc áp dụng công cụ AI hỗ trợ phân tích và viết mã nguồn theo đúng yêu cầu môn học.
+Dự án: Cải tiến giao diện thẻ sản phẩm thương mại điện tử (Nâng cấp Buổi 2)  
+Đối tượng nghiên cứu: Tiki.vn  
+Mục đích: Lập nhật ký theo dõi việc áp dụng công cụ AI hỗ trợ phân tích, xây dựng Flexbox menu, hiệu ứng tương tác và tối ưu Responsive theo đúng yêu cầu bài tập cá nhân Buổi 2.
 
 ---
 
 ## 1. Quy Trình Sử Dụng AI
 
-Quá trình thực hiện bài tập được chia làm 3 bước rõ ràng:
-Step 1: Đưa ra câu hỏi cụ thể kèm bối cảnh yêu cầu phân tích giao diện và tối ưu UX.
-Step 2: Đánh giá kết quả trả về từ AI, so sánh với giao diện thực tế của Tiki.vn để loại bỏ các thông tin không chính xác.
-Step 3: Tiến hành chỉnh sửa và viết lại mã nguồn bằng tay để phù hợp với tài nguyên thực tế của dự án.
+Quá trình thực hiện bài tập Buổi 2 được chia làm 3 bước rõ ràng:
+- **Step 1:** Đưa ra câu hỏi cụ thể kèm mã nguồn hiện tại (`index.html`, `style.css`), yêu cầu AI đề xuất cách thêm thanh Menu điều hướng (`<nav>`), áp dụng Flexbox cho Header, bổ sung trạng thái tương tác (`:hover`, `:focus-visible`) và giải thích các thuộc tính CSS.
+- **Step 2:** Đánh giá kết quả trả về từ AI, sử dụng DevTools (F12) kiểm tra tính chính xác của các đường kẻ Flexbox Overlay, thử nghiệm phím Tab để kiểm tra `:focus-visible` và coi trước ở các mốc màn hình 1366px, 768px, 390px.
+- **Step 3:** Tiến hành tinh chỉnh mã nguồn bằng tay, điều chỉnh khoảng cách `gap`, bổ sung thuộc tính Responsive xếp dọc cho Header trên di động và hoàn thiện bảng kiểm thử.
 
 ---
 
 ## 2. Chi Tiết Các Yêu Cầu Đã Gửi Cho AI
 
-### Yêu cầu 1: Phân tích 5 khu vực giao diện Tiki
-- Nội dung yêu cầu: Yêu cầu AI đóng vai trò người phân tích giao diện để lập bảng đánh giá 5 khu vực gồm Trang chủ, Danh mục, Chi tiết sản phẩm, Tìm kiếm, Giỏ hàng với các mục: Mục đích, Thành phần, Điểm thuận tiện, Vấn đề phát sinh và Đề xuất.
-- Kết quả thu được: AI đưa ra cấu trúc bảng đầy đủ. Các điểm tồn tại về bộ lọc trên di động và vị trí khối thanh toán giỏ hàng phù hợp với thực tế.
-- Xử lý của sinh viên: Kiểm chứng lại từng vị trí trên website Tiki.vn và giữ lại các nhận xét đúng thực tế để đưa vào báo cáo.
+### Yêu cầu 1: Tích hợp Menu điều hướng & Căn chỉnh Flexbox cho Header
+- **Nội dung yêu cầu:** Yêu cầu AI hướng dẫn bổ sung thẻ `<nav class="nav-menu">` vào trong `<header>` và viết CSS sử dụng `display: flex`, `justify-content: space-between`, `align-items: center` để căn chỉnh tên cửa hàng bên trái, menu bên phải.
+- **Kết quả thu me:** AI cung cấp đoạn mã HTML `<nav>` chuẩn ngữ nghĩa và mã CSS áp dụng Flexbox giúp bố cục Header dàn đều 2 bên mượt mà.
+- **Xử lý của sinh viên:** Cập nhật mã vào dự án, mở DevTools bật nhãn `flex` để xác minh đường lưới Flexbox hiển thị đúng thực tế.
 
-### Yêu cầu 2: Đề xuất giải pháp sửa lỗi thẻ sản phẩm
-- Nội dung yêu cầu: Yêu cầu AI đề xuất phương án xử lý 3 lỗi gồm: hiển thị giá mờ, nút mua không nổi bật và thẻ sản phẩm cao thấp không đều.
-- Kết quả thu được: AI đề xuất cách phân chia lại cấu trúc thẻ HTML và sử dụng thuộc tính Flexbox kết hợp cắt chữ tự động trong CSS.
-- Xử lý của sinh viên: Tiếp nhận phương án kỹ thuật và yêu cầu AI chuyển sang bước tạo mã chi tiết.
+### Yêu cầu 2: Bổ sung hiệu ứng tương tác Hover & Focus-visible
+- **Nội dung yêu cầu:** Yêu cầu AI đề xuất cách tạo hiệu ứng di chuột (`:hover`) đổi màu cho nút bấm/menu kèm `transition`, và bổ sung trạng thái `:focus-visible` hỗ trợ điều hướng bằng bàn phím (Accessibility).
+- **Kết quả thu được:** AI đưa ra đoạn mã CSS `:hover` đổi màu nền và `:focus-visible` tạo đường viền nổi bật `outline: 3px solid #f59e0b`.
+- **Xử lý của sinh viên:** Thử nghiệm dùng phím Tab trên bàn phím để kiểm tra tiêu điểm xuất hiện xung quanh tên sản phẩm và nút bấm trước khi đưa vào bài tập.
 
-### Yêu cầu 3: Tạo mã nguồn HTML và CSS
-- Nội dung yêu cầu: Yêu cầu AI tạo mã nguồn tách riêng hai file `index.html` và `style.css`, sử dụng đúng danh sách tên ảnh local trong thư mục images.
-- Kết quả thu được: AI xuất đoạn mã HTML chuẩn ngữ nghĩa và file CSS chứa đầy đủ cấu trúc khung và thuộc tính tự điều chỉnh màn hình.
+### Yêu cầu 3: Tối ưu Responsive cho thiết bị di động (390px)
+- **Nội dung yêu cầu:** Yêu cầu AI hỗ trợ phát hiện và khắc phục lỗi xô lệch Header khi xem ở kích thước màn hình nhỏ 390px.
+- **Kết quả thu được:** AI đề xuất sử dụng `@media (max-width: 576px)` kết hợp `flex-direction: column` để chuyển menu rớt xuống hàng dọc dưới tiêu đề.
+- **Xử lý của sinh viên:** Kiểm tra trên Chrome DevTools ở mốc 390px, điều chỉnh lại `gap: 12px` cho thoáng mắt và ghi nhận đây là phần lỗi tự cải tiến độc lập.
 
 ---
 
@@ -48,43 +46,37 @@ Step 3: Tiến hành chỉnh sửa và viết lại mã nguồn bằng tay để
 
 | Thành phần mã | Mức độ điều chỉnh | Nội dung tự chỉnh sửa và lý do |
 | :--- | :--- | :--- |
-| Đường dẫn tệp ảnh (`src`) | Thay đổi hoàn toàn | Chỉnh sửa lại toàn bộ đường dẫn hình ảnh trong file HTML từ dạng liên kết mạng sang đường dẫn tệp tin nội bộ `images/ao_thun.jpg`, `images/giay.jpg`, `images/quan_tay.jpg`, `images/sandal.jpg` để đảm bảo bài tập chạy không cần kết nối mạng. |
-| Nội dung chữ | Thay đổi hoàn toàn | Cập nhật lại tên các sản phẩm và mức giá tương ứng đúng với các mặt hàng thời trang trong thư mục hình ảnh thực tế. |
-| Tùy chỉnh CSS (`style.css`) | Chỉnh sửa 30% | thêm thuộc tính `object-fit: cover` cho phần hình ảnh để tránh tình trạng ảnh bị co giãn lệch tỉ lệ, bổ sung chiều cao dòng cố định cho phần tên sản phẩm để đảm bảo không bị lỗi giao diện khi hiển thị trên các trình duyệt khác nhau. |
+| **Cấu trúc Header (`<header>`)** | Bổ sung 100% | Tự tay chèn khối `<nav class="nav-menu">` chứa 3 liên kết *Trang chủ*, *Sản phẩm*, *Giới thiệu* để hoàn thiện chuẩn HTML5 ngữ nghĩa. |
+| **Hiệu ứng `:focus-visible`** | Bổ sung 100% | Viết thêm các quy tắc CSS `:focus-visible` cho nút `.btn-add-cart` và thẻ tiêu đề sản phẩm để đáp ứng tiêu chuẩn Accessibility (hỗ trợ phím Tab). |
+| **Tối ưu Responsive Header** | Điều chỉnh 40% | Viết đoạn mã `@media (max-width: 576px)` tùy chỉnh `flex-direction: column` và `align-items: flex-start` giúp menu không bị đè chữ hay tràn khung trên điện thoại 390px. |
+| **Bảng kiểm thử & Báo cáo** | Tự thực hiện 100% | Lập bảng kiểm thử 7 tiêu chí (HTML, CSS Status 200, Image, Link, Responsive 390px, Hover/Focus, Sửa lỗi độc lập) và tự giải thích lý thuyết Box Model/Flexbox/Grid. |
 
 ---
 
-## 4. Kết Luận Khi Sử Dụng AI
+## 4. Kết Quả AI Đề Xuất (Buổi 2)
 
-Sử dụng AI giúp rút ngắn thời gian lập cấu trúc khung và đưa ra các gợi ý xử lý CSS hợp lý. Tuy nhiên, việc tự kiểm tra giao diện trên trình duyệt và tự tay sửa đổi mã nguồn là bắt buộc để đảm bảo tệp tin liên kết đúng cấu trúc thư mục local và hiển thị chính xác theo yêu cầu đề bài.
-## 4. Kết Quả AI Đề Xuất
-
-- Đề xuất phương án phân tích: AI đã lập bảng tổng hợp đánh giá 5 khu vực trên website Tiki.vn gồm Trang chủ, Danh mục, Chi tiết sản phẩm, Tìm kiếm và Giỏ hàng. Bảng phân tích làm rõ mục đích, thành phần giao diện, điểm thuận tiện, hạn chế thực tế và giải pháp nâng cấp trải nghiệm người dùng.
-- Đề xuất cấu trúc kỹ thuật: AI gợi ý sử dụng mô hình CSS Grid kết hợp Flexbox cho thẻ sản phẩm. Đề xuất giải pháp cắt chữ tự động bằng CSS (`-webkit-line-clamp: 2`) cho tên sản phẩm và thuộc tính `margin-top: auto` để đẩy nút bấm xuống đáy thẻ nhằm giải quyết triệt để lỗi thẻ cao thấp không đều.
-- Đề xuất mã nguồn ban đầu: AI đã sinh toàn bộ đoạn mã cấu trúc HTML5 và file định kiểu CSS3 tách biệt, bao gồm cả phần tự động co giãn giao diện (Responsive) cho máy tính và điện thoại.
+- **Đề xuất Flexbox:** AI gợi ý giải pháp căn chỉnh Header 2 bên bằng `justify-content: space-between` và căn giữa theo trục dọc bằng `align-items: center`.
+- **Đề xuất Accessibility:** AI hướng dẫn phân biệt `:hover` (tương tác chuột) và `:focus-visible` (tương tác bàn phím Tab), đề xuất sử dụng `outline-offset` để đường viền nổi bật không làm thay đổi kích thước phần tử.
+- **Đề xuất Responsive:** AI gợi ý dùng Media Query để chuyển đổi linh hoạt giữa `flex-direction: row` (máy tính) và `flex-direction: column` (điện thoại).
 
 ---
 
 ## 5. Kiểm Tra Và Điều Chỉnh
 
 ### 5.1. Các điểm đã tiến hành kiểm tra
-- Đối chiếu giao diện: Truy cập thực tế website Tiki.vn để xác minh các nhận xét về UX/UI do AI đưa ra, đảm bảo không sử dụng các đánh giá sai lệch hoặc thiếu căn cứ.
-- Kiểm tra mã nguồn: Mở tệp `index.html` và `style.css` bằng trình duyệt để kiểm tra khả năng liên kết giữa hai file, hiển thị hình ảnh, font chữ và độ phân giải trên màn hình máy tính lẫn điện thoại.
+- **Kiểm tra DevTools Overlay:** Bật công cụ kiểm tra Flexbox/Grid trên Chrome DevTools (F12) để chụp ảnh minh chứng các trục căn chỉnh và khoảng cách `gap`.
+- **Kiểm tra phím Tab (Keyboard Navigation):** Nhấn phím Tab liên tục trên trình duyệt để kiểm tra khung viền `:focus-visible` di chuyển qua từng liên kết và nút bấm.
+- **Kiểm tra Responsive Multi-device:** Thay đổi kích thước trình duyệt DevTools ở các mốc 1366px (Desktop), 768px (Tablet) và 390px (Mobile) để xác minh bố cục không bị tràn.
 
 ### 5.2. Các điểm đã sửa đổi và không sử dụng
-- Thay đổi đường dẫn ảnh: Loại bỏ hoàn toàn các liên kết hình ảnh trực tuyến (URL online) do AI tạo ra ban đầu, thay bằng đường dẫn tệp tin nội bộ trong dự án (`images/ao_thun.jpg`, `images/giay.jpg`, `images/quan_tay.jpg`, `images/sandal.jpg`).
-- Cập nhật dữ liệu sản phẩm: Sửa lại tên và giá tiền của toàn bộ 4 sản phẩm mẫu cho khớp với hình ảnh thực tế thuộc nhóm hàng thời trang.
-- Tối ưu CSS: Bổ sung thuộc tính `object-fit: cover` cho thẻ ảnh để tránh bị méo tỉ lệ khi ép về khung vuông 1:1, thêm thuộc tính chiều cao dòng cố định `height: 2.8em` cho phần tiêu đề sản phẩm để giữ khung 2 dòng đồng đều trên mọi trình duyệt.
-- Loại bỏ mã thừa: Không sử dụng các đoạn mã JavaScript hoặc thư viện bên ngoài do AI gợi ý thêm, giữ đúng yêu cầu bài tập chỉ sử dụng thuần HTML5 và CSS3.
+- **Điều chỉnh màu viền Focus:** Sửa màu `outline` mặc định của AI sang màu cam `#f59e0b` nổi bật để dễ quan sát hơn trên nền trắng.
+- **Loại bỏ thuộc tính Flex thừa:** Loại bỏ các khai báo `flex-wrap` không cần thiết ở Header để giữ cho cấu trúc CSS đơn giản, dễ quản lý.
 
 ---
 
 ## 6. Phần Em Hiểu Và Có Thể Giải Thích
 
-- Cấu trúc thẻ ngữ nghĩa trong HTML: Hiểu và giải thích được vai trò của thẻ `<article>` đại diện cho một thẻ sản phẩm độc lập, thẻ `<header>` và `<main>` để phân chia khu vực trang, thẻ `<del>` để tạo đường gạch ngang giá gốc và thẻ `<button>` cho nút thao tác.
-- Mô hình CSS Grid: Giải thích được cách dùng `display: grid` và `grid-template-columns: repeat(auto-fill, minmax(240px, 1fr))` để chia cột tự động trên màn hình máy tính, giúp danh sách sản phẩm tự căn chỉnh khoảng cách mượt mà.
-- Kỹ thuật Flexbox trong thẻ sản phẩm: Giải thích được tác dụng của `display: flex; flex-direction: column; height: 100%;` áp dụng cho thẻ `.product-card`, giúp tất cả các thẻ nằm chung một hàng luôn tự co giãn bằng chiều cao của thẻ cao nhất.
-- Kỹ thuật định vị nút bấm: Giải thích được cơ chế của `margin-top: auto` áp dụng cho class `.btn-add-cart`, giúp nút bấm luôn bị đẩy xuống nằm sát đáy thẻ sản phẩm bất kể phần nội dung tên phía trên dài hay ngắn.
-- Xử lý cắt chữ CSS (Truncate Text): Giải thích được cơ chế kết hợp giữa `display: -webkit-box`, `-webkit-line-clamp: 2`, `-webkit-box-orient: vertical` và `overflow: hidden` để ép tên sản phẩm chỉ hiển thị tối đa 2 dòng và tự thêm dấu ba chấm khi bị tràn chữ.
-- Cơ chế Responsive Design: Giải thích được cách sử dụng `@media (max-width: 576px)` để can thiệp vào CSS khi xem trên thiết bị di động, chuyển từ giao diện nhiều cột sang đúng 2 cột sản phẩm chuẩn thương mại điện tử.
-
+- **Vai trò của Class Selector & Box Model:** Giải thích rõ khái niệm `class` dùng để tái sử dụng style, sự khác biệt giữa `padding` (khoảng cách trong) và `margin` (khoảng cách ngoài đẩy phần tử).
+- **Cơ chế Flexbox trong Header:** Giải thích được tác dụng của `display: flex` đặt ở phần tử cha (`.header-content`), thuộc tính `justify-content` điều khiển trục chính và `align-items` điều khiển trục phụ.
+- **Sự khác biệt giữa CSS Grid và Flexbox:** Flexbox quản lý bố cục 1 chiều (hàng hoặc cột - áp dụng cho Header/Nút bấm), trong khi CSS Grid quản lý 2 chiều (hàng và cột - áp dụng chia 4 cột sản phẩm).
+- **Ý nghĩa của `:hover` và `:focus-visible`:** `:hover` kích hoạt khi di chuột; `:focus-
